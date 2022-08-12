@@ -10,14 +10,14 @@ import com.example.sensores.databinding.ActivityVideoMediaBinding
 class VideoMediaActivity : AppCompatActivity() {
 
     private val binding: ActivityVideoMediaBinding by lazy { ActivityVideoMediaBinding.inflate(layoutInflater) }
-    private val mediaController = MediaController(this)
-    private val urlPath = "https://archive.org/download/WildlifeSampleVideo/Wildlife.cp4"
-    private val uri = Uri.parse(urlPath)
+    private val urlPath = "https://archive.org/download/WildlifeSampleVideo/Wildlife.mp4"
+    private var uri = Uri.parse(urlPath)
     private var isContinuously = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        val mediaController = MediaController(this)
         mediaController.setAnchorView(binding.videoView)
         with(binding) {
             videoView.setOnCompletionListener {
@@ -41,7 +41,7 @@ class VideoMediaActivity : AppCompatActivity() {
                 videoView.requestFocus()
                 videoView.start()
             }
-            videoView.setOnPreparedListener { progressBar.isVisible = false }
+            videoView.setOnPreparedListener { progressBar.isVisible = true }
         }
 
     }

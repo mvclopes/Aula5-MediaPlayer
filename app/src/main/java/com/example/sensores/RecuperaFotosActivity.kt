@@ -11,7 +11,7 @@ class RecuperaFotosActivity : AppCompatActivity() {
     private val animais = arrayOf("Leão", "Pinguim", "Urso", "Girafa", "Tigre", "Rato")
     private val imagens = arrayOf(
         "https://www.infoescola.com/wp-content/uploads/2017/04/leao-126767138.jpg",
-        "https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/02/pinguim-nadando.jpg",
+        "https://www.infoescola.com/wp-content/uploads/2010/11/pinguim-real_103683425.jpg",
         "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/08/2022-08-11T135857Z_1_LWD798211082022RP1_RTRWNEV_E_7982-TURKEY-BEAR.jpg?w=768",
         "https://www.infoescola.com/wp-content/uploads/2008/04/girafa-336x450.jpg",
         "https://s3.static.brasilescola.uol.com.br/be/2022/01/tigre.jpg",
