@@ -8,7 +8,11 @@ import com.example.sensores.databinding.ActivityRecuperaFotosBinding
 class RecuperaFotosActivity : AppCompatActivity() {
 
     private val binding: ActivityRecuperaFotosBinding by lazy { ActivityRecuperaFotosBinding.inflate(layoutInflater) }
+
+    // Array de string de animais
     private val animais = arrayOf("Leão", "Pinguim", "Urso", "Girafa", "Tigre", "Rato")
+
+    // Array de string de URLs de fotos
     private val imagens = arrayOf(
         "https://www.infoescola.com/wp-content/uploads/2017/04/leao-126767138.jpg",
         "https://www.infoescola.com/wp-content/uploads/2010/11/pinguim-real_103683425.jpg",
@@ -23,6 +27,7 @@ class RecuperaFotosActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
+            // Setando nomes dos animais em seus respectivos TextView
             txtView1.text = animais[0]
             txtView2.text = animais[1]
             txtView3.text = animais[2]
@@ -30,6 +35,13 @@ class RecuperaFotosActivity : AppCompatActivity() {
             txtView5.text = animais[4]
             txtView6.text = animais[5]
 
+            /*
+             Setando URL das fotos em seus respectivos ImageView, o carregamento das imagens é
+             feito utilizando a lib Glide, onde é necessário fornecer os seguintes parâmetros:
+             -Contexto
+             -Imagem (aceita diferentes formatos como: String, URI, Drawable, Bitmap, etc)
+             -View que exibirá a imagem
+             */
             Glide.with(this@RecuperaFotosActivity).load(imagens[0]).into(imgView1)
             Glide.with(this@RecuperaFotosActivity).load(imagens[1]).into(imgView2)
             Glide.with(this@RecuperaFotosActivity).load(imagens[2]).into(imgView3)

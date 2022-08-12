@@ -11,6 +11,8 @@ import com.example.sensores.databinding.ActivityWebViewBinding
 class WebViewActivity : AppCompatActivity() {
 
     private val binding: ActivityWebViewBinding by lazy { ActivityWebViewBinding.inflate(layoutInflater) }
+
+    // URL do site a ser exibido na WebView
     private val url = "https://www.fiap.com.br/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,7 @@ class WebViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
+            // Configuração do componente WebClient da view
             webView.webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                     if (!url.isNullOrBlank()) {
@@ -26,7 +29,9 @@ class WebViewActivity : AppCompatActivity() {
                     return true
                 }
             }
+            // Habilita execução com JavaScript
             webView.settings.javaScriptEnabled = true
+            // Carregamento da URL no componente WebView
             webView.loadUrl(url)
         }
 
