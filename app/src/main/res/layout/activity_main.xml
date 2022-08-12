@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/recuperarFotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recuperando fotos com ImageView"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Utilizando mapas: MapView"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/locationApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Localização do usuário com Location API"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/rotas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rotas"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/pontosInteresse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pontos de interesse"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usando WebView em seus Apps"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/audioManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sons: AudioManager"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/mediaPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vídeos: MediaPlayer"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/viewAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animação em views com View Animation"
+        android:textAllCaps="false"/>
+</LinearLayout>
