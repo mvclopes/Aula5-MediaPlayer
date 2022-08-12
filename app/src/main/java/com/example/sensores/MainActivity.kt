@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding.webView.setOnClickListener { acessarWebView() }
         binding.audioManager.setOnClickListener { acessaSons() }
         binding.mediaPlayer.setOnClickListener { acessaVideo() }
+        binding.viewAnimation.setOnClickListener { acessaAnimacoes() }
     }
 
     private fun acessarAnimacao() {
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun acessaVideo() {
         val intent = Intent(this, VideoMediaActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun acessaAnimacoes() {
+        val intent = Intent(this, AnimationsActivity::class.java)
         startActivity(intent)
     }
 }

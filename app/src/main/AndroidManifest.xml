@@ -18,21 +18,25 @@
         android:theme="@style/Theme.Sensores"
         tools:targetApi="31">
         <activity
-            android:name=".VideoMediaActivity"
+            android:name=".AnimationsActivity"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".VideoMediaActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SonsActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".WebViewActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RecuperaFotosActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
