@@ -9,6 +9,7 @@ import com.example.sensores.databinding.ActivityAnimationsBinding
 
 class AnimationsActivity : AppCompatActivity() {
 
+    // Map de String e Int das animações
     private val animationsMap = mapOf(
         "Fade In" to R.anim.fade_in,
         "Fade Out" to R.anim.fade_out,
@@ -21,7 +22,11 @@ class AnimationsActivity : AppCompatActivity() {
         "Slide Down" to R.anim.slide_down,
         "Bounce" to R.anim.bounce
     )
+
+    // Lista contendo nome das animações
     private val animationsName = animationsMap.keys.toList()
+
+    // Lista contendo id das animações
     private val animationsId = animationsMap.values.toList()
 
     private val binding: ActivityAnimationsBinding by lazy { ActivityAnimationsBinding.inflate(layoutInflater) }
@@ -29,14 +34,27 @@ class AnimationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        configureAdapter()
+        onItemAnimation()
+    }
 
-        binding.listView.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, animationsName)
-        binding.listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val animation = AnimationUtils.loadAnimation(
-                this,
-                animationsId[position]
-            )
-            binding.txtView.startAnimation(animation)
-        }
+    // Método responsável por configurar listener para clique nos itens da ListView
+    private fun onItemAnimation() {
+        binding.listView.onItemClickListener =
+            AdapterView.OnItemClickListener { _, _, position, _ ->
+                // Carregamento da animação clicada de acordo com sua posição
+                val animation = AnimationUtils.loadAnimation(
+                    this,
+                    animationsId[position]
+                )
+                // Iniciada a animação na view especificada
+                binding.txtView.startAnimation(animation)
+            }
+    }
+
+    // Método responsável por configurar o adapter do componente ListView, fornecendo a lista de nomes das animações
+    private fun configureAdapter() {
+        binding.listView.adapter =
+            ArrayAdapter(this, android.R.layout.simple_list_item_1, animationsName)
     }
 }
