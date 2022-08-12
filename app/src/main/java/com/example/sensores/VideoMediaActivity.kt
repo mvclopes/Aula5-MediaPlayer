@@ -41,7 +41,7 @@ class VideoMediaActivity : AppCompatActivity() {
                 videoView.requestFocus()
                 videoView.start()
             }
-            videoView.setOnPreparedListener { progressBar.isVisible = true }
+            videoView.setOnPreparedListener { progressBar.isVisible = false }
         }
 
     }
