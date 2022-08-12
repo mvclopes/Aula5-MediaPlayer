@@ -12,11 +12,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.recuperarFotos.setOnClickListener { acessarAnimacao() }
-        binding.webView.setOnClickListener { acessarWebView() }
-        binding.audioManager.setOnClickListener { acessaSons() }
-        binding.mediaPlayer.setOnClickListener { acessaVideo() }
-        binding.viewAnimation.setOnClickListener { acessaAnimacoes() }
+        with(binding) {
+            recuperarFotos.setOnClickListener { acessarAnimacao() }
+            webView.setOnClickListener { acessarWebView() }
+            audioManager.setOnClickListener { acessaSons() }
+            mediaPlayer.setOnClickListener { acessaVideo() }
+            viewAnimation.setOnClickListener { acessaAnimacoes() }
+        }
     }
 
     private fun acessarAnimacao() {
