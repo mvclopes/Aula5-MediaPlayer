@@ -15,34 +15,6 @@
         android:textAllCaps="false"/>
 
     <Button
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Utilizando mapas: MapView"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/locationApi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Localização do usuário com Location API"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/rotas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rotas"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/pontosInteresse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pontos de interesse"
-        android:textAllCaps="false"/>
-
-    <Button
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
